@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Register an athlete at Spike Volleyball Academy. Sign up for camps, metrics tracking, and recruiting portfolios.">
+  <title>Register Athlete | Spike Academy Portal</title>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <script src="assets/js/theme-toggle.js"></script>
+</head>
+<body>
+
+  <!-- Auth Layout Wrapper -->
+  <div class="auth-wrapper">
+    <div class="auth-card" style="max-width: 550px;">
+      <div class="auth-header">
+        <a href="index.html" class="auth-logo">
+          SPIKE<span>ACADEMY</span>
+        </a>
+        <h1 class="auth-title text-uppercase font-headings">Athlete Registration</h1>
+        <p class="auth-subtitle">Create an account to begin skill tracking & camp enrollments.</p>
+      </div>
+
+      <form id="signupForm">
+        <div class="row">
+          <div class="col-md-6 form-group">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-control-camp" placeholder="John Doe" required autocomplete="name">
+          </div>
+          <div class="col-md-6 form-group">
+            <label class="form-label">Contact Email</label>
+            <input type="email" class="form-control-camp" placeholder="john@example.com" required autocomplete="email">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 form-group">
+            <label class="form-label">Registration Role</label>
+            <select class="form-control-camp" style="background-color: var(--bg-primary);">
+              <option>Athlete Profile</option>
+              <option>Parent / Guardian Profile</option>
+              <option>Recruiting Scout Profile</option>
+            </select>
+          </div>
+          <div class="col-md-6 form-group">
+            <label class="form-label">Athlete Graduation Year</label>
+            <input type="text" class="form-control-camp" placeholder="e.g. 2027" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Password</label>
+          <input type="password" class="form-control-camp" placeholder="Minimum 8 characters" required autocomplete="new-password">
+        </div>
+
+        <div class="form-group mb-4">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="termsCheck" required>
+            <label class="text-secondary" style="font-size: 0.85rem;" for="termsCheck">I agree to the Spike Academy camp guidelines and liability waiver terms.</label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-custom btn-primary-camp btn-auth">Create Account</button>
+      </form>
+
+      <div class="auth-footer">
+        Already registered? <a href="login.html" class="auth-link">Sign In</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

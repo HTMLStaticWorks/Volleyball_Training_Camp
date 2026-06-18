@@ -1,0 +1,51 @@
+/* ==========================================================================
+   Volleyball Training Camp Website - dark.css (Dark Mode Overrides)
+   ========================================================================== */
+
+[data-theme="dark"] {
+  /* Color Overrides for Dark Mode */
+  --bg-primary: #020617;
+  --bg-surface: #0B1120;
+  --bg-surface-glass: rgba(255, 255, 255, 0.04);
+  --border-color: rgba(255, 255, 255, 0.07);
+  --text-primary: #E2E8F0;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+  
+  --color-primary: #3B82F6; /* Accent Blue */
+  --color-primary-rgb: 59, 130, 246;
+  --color-accent: #FB923C; /* Accent Orange */
+  --color-accent-rgb: 251, 146, 60;
+  --color-accent-hover: #F97316;
+  --color-blue-glow: rgba(59, 130, 246, 0.12);
+  --color-orange-glow: rgba(251, 146, 60, 0.12);
+  
+  --card-shadow: 0 10px 30px -5px rgba(2, 6, 23, 0.5), 0 4px 15px -5px rgba(2, 6, 23, 0.3);
+}
+
+/* Specific component tweaks for dark mode to ensure maximum readability */
+[data-theme="dark"] .glass-card {
+  box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .program-card {
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .program-card:hover {
+  box-shadow: 0 15px 35px var(--color-blue-glow);
+  border-color: rgba(var(--color-primary-rgb), 0.3);
+}
+
+[data-theme="dark"] .testimonial-card {
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .auth-card {
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+}
+
+/* Ensure smooth image transitions and map elements stand out */
+[data-theme="dark"] iframe {
+  filter: grayscale(1) invert(0.9) contrast(1.2);
+}
