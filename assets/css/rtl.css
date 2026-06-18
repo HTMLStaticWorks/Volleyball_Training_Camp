@@ -1,0 +1,117 @@
+/* ==========================================================================
+   Volleyball Training Camp Website - rtl.css
+   ========================================================================== */
+
+/* Global RTL adjustments */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .text-left {
+  text-align: right !important;
+}
+
+/* Nav links active underline transition */
+[dir="rtl"] .nav-link::after {
+  left: auto;
+  right: 0;
+}
+
+/* Dropdown positions */
+[dir="rtl"] .nav-dropdown {
+  left: auto;
+  right: -20px;
+}
+
+/* List element padding resets in RTL */
+[dir="rtl"] .footer-contact-info,
+[dir="rtl"] .footer-links,
+[dir="rtl"] .nav-links,
+[dir="rtl"] .mobile-nav-links,
+[dir="rtl"] .breadcrumb-list {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+/* Footer links hover effect */
+[dir="rtl"] .footer-link {
+  transition: var(--transition-smooth);
+}
+
+[dir="rtl"] .footer-link:hover {
+  padding-left: 0;
+  padding-right: 5px;
+}
+
+/* Overriding inline style layout border indicators */
+[dir="rtl"] .recruiting-banner .glass-card,
+[dir="rtl"] .recruiting-banner div[style*="border-left"] {
+  border-left: none !important;
+  border-right: 4px solid var(--color-accent) !important;
+}
+
+[dir="rtl"] blockquote.border-left,
+[dir="rtl"] blockquote[style*="border-left"] {
+  border-left: none !important;
+  border-right: 4px solid var(--color-accent) !important;
+}
+
+/* Mobile Nav Drawer slide from left in RTL */
+[dir="rtl"] .mobile-drawer {
+  right: auto;
+  left: -300px;
+  border-left: none;
+  border-right: 1px solid var(--border-color);
+  box-shadow: 5px 0 25px rgba(0, 0, 0, 0.15);
+  transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[dir="rtl"] .mobile-drawer.open {
+  left: 0;
+  right: auto;
+}
+
+/* Mirroring arrow directions on buttons and controls */
+[dir="rtl"] .testimonial-prev svg,
+[dir="rtl"] .testimonial-next svg,
+[dir="rtl"] .btn-newsletter svg,
+[dir="rtl"] .coach-social-link svg,
+[dir="rtl"] .footer-social-link svg {
+  transform: scaleX(-1);
+}
+
+/* RTL Layout Toggle Switch style (matching theme button) */
+.rtl-switch-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  background-color: var(--border-color);
+  transition: var(--transition-smooth);
+  font-family: var(--font-headings);
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.2px;
+  line-height: 1;
+  user-select: none;
+}
+
+.rtl-switch-btn:hover,
+.rtl-switch-btn.active {
+  color: var(--color-accent);
+  background-color: var(--border-color);
+  transform: scale(1.05);
+}
+
+/* Align theme and RTL buttons inside layout actions */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}

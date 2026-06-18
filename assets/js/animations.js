@@ -102,9 +102,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 4. Hero Section Interactive Entrance Elements
   if (document.querySelector('.hero-content-wrapper')) {
+    const isRtl = document.documentElement.getAttribute('dir') === 'rtl';
     const heroTimeline = gsap.timeline();
     heroTimeline
-      .from('.hero-subtitle', { opacity: 0, x: -30, duration: 0.6, ease: 'power2.out' })
+      .from('.hero-subtitle', { opacity: 0, x: isRtl ? 30 : -30, duration: 0.6, ease: 'power2.out' })
       .from('.hero-title', { opacity: 0, y: 30, duration: 0.8, ease: 'power3.out' }, '-=0.4')
       .from('.hero-desc', { opacity: 0, y: 20, duration: 0.6, ease: 'power2.out' }, '-=0.4')
       .from('.hero-actions .btn-custom', { opacity: 0, y: 15, stagger: 0.15, duration: 0.5, ease: 'power2.out' }, '-=0.3');
