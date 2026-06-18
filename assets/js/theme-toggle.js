@@ -35,14 +35,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const initialTheme = document.documentElement.getAttribute('data-theme') || 'dark';
   updateToggleIcons(initialTheme);
 
-  themeToggleBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
+  // Use delegation so it works for cloned/dynamic buttons in the mobile drawer too!
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.theme-switch-btn');
+    if (btn) {
       const currentTheme = document.documentElement.getAttribute('data-theme');
       const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
       
       document.documentElement.setAttribute('data-theme', newTheme);
       localStorage.setItem('vbc-theme', newTheme);
       updateToggleIcons(newTheme);
-    });
+    }
   });
 });

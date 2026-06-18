@@ -59,7 +59,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-headings);
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   color: var(--text-primary);
@@ -130,7 +130,7 @@ img {
   gap: 10px;
   font-family: var(--font-headings);
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 1px;
 }
 
@@ -153,7 +153,7 @@ img {
 .nav-link {
   font-family: var(--font-headings);
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.5px;
   padding: 8px 0;
   display: inline-block;
@@ -279,6 +279,13 @@ img {
   .nav-actions {
     gap: 10px;
   }
+
+  /* Hide theme, RTL, and signup buttons from header in mobile/tablet views */
+  .site-header .theme-switch-btn,
+  .site-header .rtl-switch-btn,
+  .site-header .btn-nav {
+    display: none !important;
+  }
 }
 
 /* Mobile Navigation Overlay Drawer */
@@ -329,7 +336,7 @@ img {
 .mobile-nav-link {
   font-family: var(--font-headings);
   font-size: 1.3rem;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   color: var(--text-primary);
 }
@@ -354,12 +361,40 @@ img {
   display: block;
 }
 
+.mobile-drawer .mobile-nav-actions {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  gap: 15px;
+  align-items: center;
+}
+
+.mobile-drawer .mobile-nav-toggle {
+  display: none !important;
+}
+
+.mobile-drawer .btn-nav {
+  order: 1;
+  width: 100%;
+  justify-content: center;
+}
+
+.mobile-drawer .theme-switch-btn {
+  order: 2;
+  display: flex !important;
+}
+
+.mobile-drawer .rtl-switch-btn {
+  order: 3;
+  display: flex !important;
+}
+
 /* ==========================================================================
    Buttons
    ========================================================================== */
 .btn-custom {
   font-family: var(--font-headings);
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   padding: 12px 28px;
@@ -454,7 +489,7 @@ img {
 
 .hero-subtitle {
   color: var(--color-accent);
-  font-weight: 700;
+  font-weight: 500;
   font-family: var(--font-headings);
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -478,16 +513,30 @@ img {
   font-size: 4rem;
   line-height: 1.1;
   margin-bottom: 20px;
+  color: #FFFFFF; /* Always white against the dark overlay */
 }
 
 .hero-desc {
   font-size: 1.2rem;
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.7); /* Always semi-transparent white */
   margin-bottom: 35px;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
 }
+
+/* Ensure secondary buttons in hero sections always display clearly */
+.hero-section .btn-secondary-camp {
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+}
+
+.hero-section .btn-secondary-camp:hover {
+  background-color: #FFFFFF;
+  color: var(--color-primary);
+  border-color: #FFFFFF;
+}
+
 
 @media (max-width: 768px) {
   .hero-title {
@@ -509,7 +558,7 @@ img {
 .section-tag {
   color: var(--color-accent);
   font-family: var(--font-headings);
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 2px;
   display: block;
@@ -603,7 +652,7 @@ img {
   background-color: var(--color-primary);
   color: #FFFFFF;
   font-family: var(--font-headings);
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
   padding: 6px 14px;
   border-radius: 20px;
@@ -637,7 +686,7 @@ img {
   padding-top: 15px;
   border-top: 1px solid var(--border-color);
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--text-muted);
 }
 
@@ -693,7 +742,7 @@ img {
 .coach-role {
   color: var(--color-accent);
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 15px;
@@ -759,7 +808,7 @@ img {
 .stat-number {
   font-family: var(--font-headings);
   font-size: 3.5rem;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--color-accent);
   line-height: 1;
   margin-bottom: 10px;
@@ -767,7 +816,7 @@ img {
 
 .stat-label {
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   color: var(--text-secondary);
   letter-spacing: 0.5px;
@@ -789,7 +838,7 @@ img {
   background-color: var(--color-primary);
   color: #FFFFFF;
   font-family: var(--font-headings);
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
   padding: 6px 14px;
   border-radius: 20px;
@@ -838,7 +887,7 @@ img {
 .testimonial-commitment {
   color: var(--color-accent);
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
 }
 
@@ -856,6 +905,9 @@ img {
   margin-bottom: 25px;
   position: relative;
   padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .footer-col-title::after {
@@ -1049,7 +1101,7 @@ img {
 
 .banner-subtitle {
   color: var(--color-accent);
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   display: block;
@@ -1131,7 +1183,7 @@ img {
   padding: 8px 18px;
   border-radius: var(--border-radius);
   font-family: var(--font-headings);
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
 }
 
@@ -1226,7 +1278,7 @@ img {
 .auth-logo {
   font-family: var(--font-headings);
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--text-primary);
   margin-bottom: 15px;
   display: block;
@@ -1252,7 +1304,7 @@ img {
 
 .form-label {
   display: block;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 0.9rem;
   margin-bottom: 8px;
   color: var(--text-primary);
@@ -1297,7 +1349,7 @@ img {
 
 .auth-link {
   color: var(--color-accent);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .auth-link:hover {
@@ -1335,7 +1387,7 @@ img {
 .error-code {
   font-family: var(--font-headings);
   font-size: 10rem;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--color-accent);
   line-height: 1;
   margin-bottom: 20px;
@@ -1441,7 +1493,7 @@ img {
 .blog-date {
   font-size: 0.85rem;
   color: var(--color-accent);
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
@@ -1460,7 +1512,7 @@ img {
 
 .blog-readmore {
   font-family: var(--font-headings);
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
   color: var(--color-primary);
   display: inline-flex;
@@ -1477,4 +1529,245 @@ img {
   width: 16px;
   height: 16px;
   fill: currentColor;
+}
+
+/* Custom Details Accordion/FAQ Styles */
+.faq-item[open] summary .chevron-icon {
+  transform: rotate(180deg);
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Custom Table & Circle Utilities */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.rounded-circle {
+  border-radius: 50% !important;
+}
+
+/* Social Auth Styling */
+.auth-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 25px 0;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-family: var(--font-body);
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.auth-divider:not(:empty)::before {
+  margin-right: 15px;
+}
+
+.auth-divider:not(:empty)::after {
+  margin-left: 15px;
+}
+
+.social-auth-group {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.social-auth-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background-color: var(--bg-surface-glass);
+  color: var(--text-primary);
+  font-family: var(--font-headings);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: var(--transition-smooth);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.social-auth-btn:hover {
+  background-color: rgba(var(--color-primary-rgb), 0.05);
+  border-color: rgba(var(--color-primary-rgb), 0.3);
+  transform: translateY(-2px);
+  color: var(--text-primary);
+}
+
+.social-auth-btn svg {
+  flex-shrink: 0;
+}
+
+.apple-btn svg {
+  color: var(--text-primary);
+  fill: currentColor;
+}
+
+/* Brand Logo Styling Consistency */
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-headings);
+  font-size: 1.5rem !important;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-primary) !important;
+  text-decoration: none;
+}
+
+.brand-logo span {
+  color: var(--color-accent) !important;
+}
+
+/* Brand Logo Icon Styling */
+.brand-logo-icon {
+  width: 1.8rem;
+  height: 1.8rem;
+  stroke: var(--color-accent);
+  fill: none;
+  stroke-width: 2;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.brand-logo:hover .brand-logo-icon {
+  transform: rotate(180deg);
+}
+
+/* ==========================================================================
+   Athlete Showcase / Commitments Cards
+   ========================================================================== */
+.athlete-card {
+  transition: var(--transition-smooth);
+}
+
+.athlete-avatar-wrapper {
+  position: relative;
+  width: 95px;
+  height: 95px;
+  margin: 0 auto 20px auto;
+}
+
+.athlete-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--color-primary);
+  box-shadow: 0 4px 12px rgba(var(--color-primary-rgb), 0.2);
+  transition: var(--transition-smooth);
+}
+
+.athlete-card:hover .athlete-avatar-img {
+  transform: scale(1.05);
+  border-color: var(--color-accent);
+  box-shadow: 0 6px 15px rgba(var(--color-accent-rgb), 0.3);
+}
+
+.athlete-badge-pill {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 4px 10px;
+  font-family: var(--font-headings);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  color: #FFFFFF;
+  background-color: var(--color-accent);
+  z-index: 2;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.athlete-badge-pill.div-2 {
+  background-color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Placements Brand Showcase
+   ========================================================================== */
+.placements-showcase-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.placement-brand-card {
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  background-color: var(--bg-surface-glass);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--card-shadow);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: var(--transition-smooth);
+  cursor: default;
+}
+
+.placement-brand-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(var(--color-primary-rgb), 0.3);
+  box-shadow: 0 10px 25px rgba(var(--color-primary-rgb), 0.1);
+}
+
+.placement-brand-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: rgba(var(--color-primary-rgb), 0.1);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-headings);
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: var(--transition-smooth);
+}
+
+[data-theme="dark"] .placement-brand-icon {
+  background-color: rgba(var(--color-primary-rgb), 0.25);
+  color: var(--color-primary);
+}
+
+.placement-brand-card:hover .placement-brand-icon {
+  background-color: var(--color-accent);
+  color: #FFFFFF;
+}
+
+.placement-brand-name {
+  font-family: var(--font-headings);
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  transition: var(--transition-smooth);
+}
+
+.placement-brand-card:hover .placement-brand-name {
+  color: var(--text-primary);
 }

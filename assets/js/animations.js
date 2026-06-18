@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 2. Staggered Reveals for Program & Coach Cards
   const cardGrids = document.querySelectorAll('.gsap-stagger-grid');
   cardGrids.forEach((grid) => {
-    const cards = grid.querySelectorAll('.program-card, .coach-card, .gallery-grid-item, .blog-card, .stat-item');
+    const cards = grid.querySelectorAll('.program-card, .coach-card, .gallery-grid-item, .blog-card, .stat-item, .glass-card');
     if (cards.length > 0) {
       gsap.fromTo(cards,
         {
