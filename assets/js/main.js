@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
   mobileBackdrop.addEventListener('click', closeDrawer);
 
   // 3. Active Nav Highlighting
-  const currentPath = window.location.pathname.split("/").pop();
+  const currentPath = window.location.pathname.split("/").pop() || "index.html";
   const allNavLinks = document.querySelectorAll('.nav-link, .dropdown-link, .mobile-nav-link');
   
   allNavLinks.forEach(link => {
@@ -191,4 +191,55 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // 7. Password Visibility Toggle
+  const passwordToggles = document.querySelectorAll('.password-toggle-btn');
+  passwordToggles.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const input = btn.previousElementSibling;
+      const eyeOpen = btn.querySelector('.eye-open');
+      const eyeClosed = btn.querySelector('.eye-closed');
+      
+      if (input.type === 'password') {
+        input.type = 'text';
+        eyeOpen.style.display = 'none';
+        eyeClosed.style.display = 'block';
+      } else {
+        input.type = 'password';
+        eyeOpen.style.display = 'block';
+        eyeClosed.style.display = 'none';
+      }
+    });
+  });
+
+  // 8. Scroll To Top Button Injection & Functionality
+  const scrollBtn = document.createElement('button');
+  scrollBtn.id = 'scrollToTopBtn';
+  scrollBtn.className = 'scroll-to-top-btn';
+  scrollBtn.setAttribute('aria-label', 'Scroll to Top');
+  scrollBtn.innerHTML = `
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  `;
+  document.body.appendChild(scrollBtn);
+
+  const toggleScrollButton = () => {
+    if (window.scrollY > 300) {
+      scrollBtn.classList.add('visible');
+    } else {
+      scrollBtn.classList.remove('visible');
+    }
+  };
+
+  window.addEventListener('scroll', toggleScrollButton);
+  toggleScrollButton(); // check initial state
+
+  scrollBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+
 });
+

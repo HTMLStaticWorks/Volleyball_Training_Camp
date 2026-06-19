@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Meet Coach Marcus Sterling. Learn about his professional career, coaching accomplishments, and athletic training philosophy.">
+  <meta id="meta-desc" name="description" content="Meet Coach Marcus Sterling. Learn about his professional career, coaching accomplishments, and athletic training philosophy.">
   <title>Coach Marcus Sterling Profile | Spike Academy</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <!-- Stylesheets -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
@@ -29,7 +31,7 @@
       </a>
       <ul class="nav-links">
         <li class="nav-item">
-          <a href="index.html" class="nav-link">Home</a>
+          <a href="index.html" class="nav-link">Home<svg class="nav-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
           <ul class="nav-dropdown">
             <li><a href="index.html" class="dropdown-link">Home 1 (Elite)</a></li>
             <li><a href="home-2.html" class="dropdown-link">Home 2 (Recruiting)</a></li>
@@ -68,11 +70,11 @@
   <section class="page-banner">
     <div class="container">
       <span class="banner-subtitle">Staff Bio</span>
-      <h1 class="banner-title">Marcus Sterling</h1>
+      <h1 id="banner-title" class="banner-title">Marcus Sterling</h1>
       <ul class="breadcrumb-list">
         <li class="breadcrumb-item"><a href="index.html">Home</a></li>
         <li class="breadcrumb-item"><a href="coaches.html">Coaches</a></li>
-        <li class="breadcrumb-item active">Marcus Sterling</li>
+        <li id="breadcrumb-active" class="breadcrumb-item active">Marcus Sterling</li>
       </ul>
     </div>
   </section>
@@ -84,44 +86,46 @@
         
         <!-- Left Column: Photo & Stats -->
         <div class="col-lg-5 gsap-reveal">
-          <img src="assets/images/coaches/coach-1.jpg" alt="Coach Marcus Sterling" class="coach-detail-img">
+          <img id="coach-img" src="assets/images/coaches/coach-1.jpg" alt="Coach Marcus Sterling" class="coach-detail-img">
           
           <ul class="coach-detail-meta">
             <li>
               <strong>Specialty:</strong>
-              <span>Outside Hitting & Jump Metrics</span>
+              <span id="spec-specialty">Outside Hitting & Jump Metrics</span>
             </li>
             <li>
               <strong>Experience:</strong>
-              <span>12 Years Collegiate, 6 Years Pro</span>
+              <span id="spec-experience">12 Years Collegiate, 6 Years Pro</span>
             </li>
             <li>
               <strong>Licensing:</strong>
-              <span>USAV Cap II Certified Trainer</span>
+              <span id="spec-licensing">USAV Cap II Certified Trainer</span>
             </li>
             <li>
               <strong>Commitments:</strong>
-              <span>35+ D1 Athlete Placements</span>
+              <span id="spec-commitments">35+ D1 Athlete Placements</span>
             </li>
           </ul>
         </div>
 
         <!-- Right Column: Biography & Philosophy -->
         <div class="col-lg-7 gsap-reveal">
-          <span class="section-tag" style="text-align: left;">Head Coach & Director</span>
+          <span id="coach-role-tag" class="section-tag" style="text-align: left;">Head Coach & Director</span>
           <h2 class="text-uppercase mb-4 font-headings">Biography</h2>
           
-          <p>Marcus Sterling is a veteran front-end instructor and coach with over 18 years of high-performance volleyball experience. In his professional career, he competed in European leagues (Italy and Poland) as a primary Outside Hitter, securing three tournament MVP placements.</p>
-          <p>Transitioning into player development, Marcus served as Assistant Coach for the Ohio State men's volleyball team before taking the role of Technical Director at Spike Academy. He coordinates the college prospect showcase series and works directly with athletic directors to coordinate scholarship tryouts.</p>
+          <div id="bio-content">
+            <p>Marcus Sterling is a veteran front-end instructor and coach with over 18 years of high-performance volleyball experience. In his professional career, he competed in European leagues (Italy and Poland) as a primary Outside Hitter, securing three tournament MVP placements.</p>
+            <p>Transitioning into player development, Marcus served as Assistant Coach for the Ohio State men's volleyball team before taking the role of Technical Director at Spike Academy. He coordinates the college prospect showcase series and works directly with athletic directors to coordinate scholarship tryouts.</p>
+          </div>
 
           <h3 class="text-uppercase mt-5 mb-3 font-headings">Training Philosophy</h3>
-          <blockquote class="p-4 rounded border-left" style="background-color: var(--bg-surface); border-left: 4px solid var(--color-accent); font-style: italic;">
+          <blockquote id="philosophy-text" class="p-4 rounded border-left" style="background-color: var(--bg-surface); border-left: 4px solid var(--color-accent); font-style: italic;">
             "We focus heavily on technical repetition and biomechanical precision. An extra inch on a vertical touch point or a split-second transition adjustment in cover setups can be the difference between a block out and a score. We build volleyball athletes with the mental endurance required for Division I sports."
           </blockquote>
 
           <h3 class="text-uppercase mt-5 mb-3 font-headings">Camps Under Direction</h3>
-          <ul class="footer-links gap-2 mb-4">
-            <li class="text-secondary"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" style="width: 18px; height: 18px; fill: var(--color-primary); margin-right: 8px;"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg> <a href="program-details.html" class="text-primary font-weight-bold">High School Prospect Showcase</a> (July 10-24)</li>
+          <ul id="camps-list" class="footer-links gap-2 mb-4">
+            <li class="text-secondary"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" style="width: 18px; height: 18px; fill: var(--color-primary); margin-right: 8px;"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg> <a href="program-details.html?program=high-school-prospect" class="text-primary font-weight-bold">High School Prospect Showcase</a> (July 10-24)</li>
             <li class="text-secondary"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" style="width: 18px; height: 18px; fill: var(--color-primary); margin-right: 8px;"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg> <a href="seasonal-camps.html" class="text-primary font-weight-bold">Spring Agility Bootcamp</a> (March 08-12)</li>
           </ul>
 
@@ -157,9 +161,9 @@
           <h3 class="footer-col-title">Programs</h3>
           <ul class="footer-links">
             <li><a href="programs.html" class="footer-link">All Programs</a></li>
-            <li><a href="program-details.html" class="footer-link">College Prospect Prep</a></li>
+            <li><a href="program-details.html?program=college-showcase-prep" class="footer-link">College Prospect Prep</a></li>
             <li><a href="seasonal-camps.html" class="footer-link">Summer Elite Camp</a></li>
-            <li><a href="programs.html" class="footer-link">Youth Skills Clinic</a></li>
+            <li><a href="program-details.html?program=youth-development" class="footer-link">Youth Skills Clinic</a></li>
           </ul>
         </div>
         <div class="col-lg-3 col-md-6">
@@ -199,5 +203,146 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/animations.js"></script>
+  <script>
+    // Coaches database
+    const COACHES_DATA = {
+      "marcus-sterling": {
+        name: "Marcus Sterling",
+        role: "Head Coach & Director",
+        metaDesc: "Meet Coach Marcus Sterling. Learn about his professional career, coaching accomplishments, and athletic training philosophy.",
+        breadcrumb: "Marcus Sterling",
+        imageSrc: "assets/images/coaches/coach-1.jpg",
+        specialty: "Outside Hitting & Jump Metrics",
+        experience: "12 Years Collegiate, 6 Years Pro",
+        licensing: "USAV Cap II Certified Trainer",
+        commitments: "35+ D1 Athlete Placements",
+        bioParagraphs: [
+          "Marcus Sterling is a veteran front-end instructor and coach with over 18 years of high-performance volleyball experience. In his professional career, he competed in European leagues (Italy and Poland) as a primary Outside Hitter, securing three tournament MVP placements.",
+          "Transitioning into player development, Marcus served as Assistant Coach for the Ohio State men's volleyball team before taking the role of Technical Director at Spike Academy. He coordinates the college prospect showcase series and works directly with athletic directors to coordinate scholarship tryouts."
+        ],
+        philosophy: "We focus heavily on technical repetition and biomechanical precision. An extra inch on a vertical touch point or a split-second transition adjustment in cover setups can be the difference between a block out and a score. We build volleyball athletes with the mental endurance required for Division I sports.",
+        campsHtml: `
+          <li class="text-secondary"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" style="width: 18px; height: 18px; fill: var(--color-primary); margin-right: 8px;"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg> <a href="program-details.html?program=high-school-prospect" class="text-primary font-weight-bold">High School Prospect Showcase</a> (July 10-24)</li>
+          <li class="text-secondary"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" style="width: 18px; height: 18px; fill: var(--color-primary); margin-right: 8px;"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg> <a href="program-details.html?program=college-showcase-prep" class="text-primary font-weight-bold">College & Showcase Prep</a> (Year-round)</li>
+        `
+      },
+      "sarah-jenkins": {
+        name: "Sarah Jenkins",
+        role: "Associate Director",
+        metaDesc: "Meet Coach Sarah Jenkins. Read about her indoor and sand volleyball background, strategic leadership, and training program overview.",
+        breadcrumb: "Sarah Jenkins",
+        imageSrc: "assets/images/coaches/coach-2.jpg",
+        specialty: "Defense Systems & Beach Tactics",
+        experience: "10 Years Coaching, 4 Years Beach Pro",
+        licensing: "USAV Cap I, Sand Volleyball Specialist",
+        commitments: "20+ Beach & Indoor Scholarship Placements",
+        bioParagraphs: [
+          "Sarah Jenkins is an accomplished double-discipline coach specializing in floor defense and sand transition gameplay. As a standout libero at UCLA, she led the Bruins to an NCAA championship appearance before transitioning to the AVP Pro Beach Volleyball tour.",
+          "At Spike Academy, Sarah designs defensive rotational patterns and leads the Beach Volleyball division. Her training blocks are highly rated for cardiovascular conditioning and reaction speed acceleration."
+        ],
+        philosophy: "Defense is about reading the hitter's shoulders and staying low. In sand or indoor, a disciplined posture and lateral quickness dictate the team's ability to transition into an offensive attack. We teach players to appreciate the grind of defensive recovery.",
+        campsHtml: `
+          <li class="text-secondary"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" style="width: 18px; height: 18px; fill: var(--color-primary); margin-right: 8px;"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg> <a href="program-details.html?program=beach-volleyball-tactics" class="text-primary font-weight-bold">Beach Volleyball Tactics</a> (Summer Session)</li>
+          <li class="text-secondary"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" style="width: 18px; height: 18px; fill: var(--color-primary); margin-right: 8px;"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg> <a href="program-details.html?program=youth-development" class="text-primary font-weight-bold">Youth Development Clinics</a> (Winter & Spring)</li>
+        `
+      },
+      "dave-miller": {
+        name: "Dave Miller",
+        role: "Setter Technical Coach",
+        metaDesc: "Meet Coach Dave Miller. Learn about his elite setting methods, tactical playmaking classes, and position-specific curriculum.",
+        breadcrumb: "Dave Miller",
+        imageSrc: "assets/images/coaches/coach-3.jpg",
+        specialty: "Offensive Setting & Rotational Tactics",
+        experience: "8 Years Collegiate Setter Coach",
+        licensing: "USAV IMPACT, SafeSport Certified",
+        commitments: "15+ Collegiate Setter Placements",
+        bioParagraphs: [
+          "Dave Miller serves as the lead tactical strategist at Spike Academy. He was a starting setter for Penn State Men's Volleyball, where he set records for career assists. Dave's coaching career covers developmental club divisions up through NCAA Division I teams.",
+          "Dave manages the Setter & Libero masterclasses, focusing on wrist release speeds, jump-setting footwork, and running high-tempo out-of-system offenses. His classroom huddles translate complex court rotations into simple key indicators."
+        ],
+        philosophy: "A setter is the quarterback of the court. Precision is nothing without decision-making speed. We teach setters to isolate blocking schemes, hold middle blockers with their eyes, and deliver butter-smooth sets under intense transition states.",
+        campsHtml: `
+          <li class="text-secondary"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" style="width: 18px; height: 18px; fill: var(--color-primary); margin-right: 8px;"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg> <a href="program-details.html?program=setter-libero-masterclass" class="text-primary font-weight-bold">Setter & Libero Masterclass</a> (Year-round)</li>
+        `
+      },
+      "elena-rostova": {
+        name: "Elena Rostova",
+        role: "Strength & Conditioning Specialist",
+        metaDesc: "Meet Coach Elena Rostova. Explore her sports science methods, vertical jump tracking, and injury prevention frameworks.",
+        breadcrumb: "Elena Rostova",
+        imageSrc: "assets/images/coaches/coach-4.jpg",
+        specialty: "Plyometrics & Vertical Reach",
+        experience: "9 Years Strength & Conditioning Lead",
+        licensing: "CSCS (Certified Strength & Conditioning Specialist)",
+        commitments: "100+ Athletes Injury-Free Certifications",
+        bioParagraphs: [
+          "Elena Rostova brings collegiate sports science expertise to the Spike Academy staff. She holds a Master's Degree in Kinesiology and spent several years as a lead strength coach training elite Division I track-and-field and court athletes.",
+          "Elena oversees our jump bootcamp and handles physical assessments. She designs plyometric training routines that boost vertical reach while implementing landing mechanics that minimize joint stress."
+        ],
+        philosophy: "Height is only half the vertical equation; explosive power and landing safety are what make a dominant jumper. We train the entire kinetic chain to increase spike height, sprint acceleration, and landing shock absorption.",
+        campsHtml: `
+          <li class="text-secondary"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" style="width: 18px; height: 18px; fill: var(--color-primary); margin-right: 8px;"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg> <a href="program-details.html?program=vertical-jump-bootcamp" class="text-primary font-weight-bold">Vertical Jump Bootcamp</a> (Monthly sessions)</li>
+        `
+      }
+    };
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const coachKey = urlParams.get("coach");
+      const data = COACHES_DATA[coachKey] || COACHES_DATA["marcus-sterling"];
+
+      if (data) {
+        // Page Title & Meta Description
+        document.title = `Coach ${data.name} Profile | Spike Academy`;
+        const metaDescEl = document.getElementById("meta-desc");
+        if (metaDescEl) {
+          metaDescEl.setAttribute("content", data.metaDesc);
+        }
+
+        // Banners & Breadcrumbs
+        const bannerTitle = document.getElementById("banner-title");
+        const breadcrumbActive = document.getElementById("breadcrumb-active");
+        if (bannerTitle) bannerTitle.textContent = data.name;
+        if (breadcrumbActive) breadcrumbActive.textContent = data.breadcrumb;
+
+        // Image
+        const coachImg = document.getElementById("coach-img");
+        if (coachImg) {
+          coachImg.src = data.imageSrc;
+          coachImg.alt = `Coach ${data.name}`;
+        }
+
+        // Sidebar specs
+        const specSpecialty = document.getElementById("spec-specialty");
+        const specExperience = document.getElementById("spec-experience");
+        const specLicensing = document.getElementById("spec-licensing");
+        const specCommitments = document.getElementById("spec-commitments");
+        if (specSpecialty) specSpecialty.textContent = data.specialty;
+        if (specExperience) specExperience.textContent = data.experience;
+        if (specLicensing) specLicensing.textContent = data.licensing;
+        if (specCommitments) specCommitments.textContent = data.commitments;
+
+        // Role & Bio content
+        const coachRoleTag = document.getElementById("coach-role-tag");
+        const bioContent = document.getElementById("bio-content");
+        if (coachRoleTag) coachRoleTag.textContent = data.role;
+        if (bioContent) {
+          bioContent.innerHTML = data.bioParagraphs
+            .map(p => `<p>${p}</p>`)
+            .join("");
+        }
+
+        // Philosophy & Camps List
+        const philosophyText = document.getElementById("philosophy-text");
+        const campsList = document.getElementById("camps-list");
+        if (philosophyText) {
+          philosophyText.textContent = `"${data.philosophy}"`;
+        }
+        if (campsList) {
+          campsList.innerHTML = data.campsHtml;
+        }
+      }
+    });
+  </script>
 </body>
 </html>

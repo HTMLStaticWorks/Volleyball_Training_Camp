@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="College Showcase Prospect Camp details. Undergo technical training, vertical metric reporting, and recruiting guides at Spike Academy.">
+  <meta id="meta-desc" name="description" content="College Showcase Prospect Camp details. Undergo technical training, vertical metric reporting, and recruiting guides at Spike Academy.">
   <title>College Showcase Prospect Camp | Spike Academy</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <!-- Stylesheets -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
@@ -29,7 +31,7 @@
       </a>
       <ul class="nav-links">
         <li class="nav-item">
-          <a href="index.html" class="nav-link">Home</a>
+          <a href="index.html" class="nav-link">Home<svg class="nav-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
           <ul class="nav-dropdown">
             <li><a href="index.html" class="dropdown-link">Home 1 (Elite)</a></li>
             <li><a href="home-2.html" class="dropdown-link">Home 2 (Recruiting)</a></li>
@@ -67,12 +69,12 @@
   <!-- Page Banner -->
   <section class="page-banner">
     <div class="container">
-      <span class="banner-subtitle">Elite Recruiting Track</span>
-      <h1 class="banner-title">High School Prospect Camp</h1>
+      <span id="banner-subtitle" class="banner-subtitle">Elite Recruiting Track</span>
+      <h1 id="banner-title" class="banner-title">High School Prospect Camp</h1>
       <ul class="breadcrumb-list">
         <li class="breadcrumb-item"><a href="index.html">Home</a></li>
         <li class="breadcrumb-item"><a href="programs.html">Programs</a></li>
-        <li class="breadcrumb-item active">Prospect Camp</li>
+        <li id="breadcrumb-active" class="breadcrumb-item active">Prospect Camp</li>
       </ul>
     </div>
   </section>
@@ -85,48 +87,52 @@
         <!-- Left Side: Main Info -->
         <div class="col-lg-8 gsap-reveal">
           <div class="mb-5">
-            <img src="assets/images/programs/highschool.png" alt="High school volleyball players spiking over net" class="img-fluid rounded-lg mb-4" style="width: 100%; max-height: 450px; object-fit: cover;">
-            <h2 class="text-uppercase mb-3 font-headings">Program Overview</h2>
-            <p>Our High School Prospect Camp is built for competitive athletes seeking placement on college sports rosters. The training framework operates at high-tempo NCAA team speeds, challenging athletes' tactical awareness, physical positioning, and serving consistency.</p>
-            <p>During the 4-week program, players undergo vertical assessment, speed-ladder training, video evaluation of hand placements, and direct competitive match plays observed by collegiate coaches.</p>
+            <img id="program-img" src="assets/images/programs/highschool.png" alt="High school volleyball players spiking over net" class="img-fluid rounded-lg mb-4" style="width: 100%; max-height: 450px; object-fit: cover;">
+            <h2 id="overview-title" class="text-uppercase mb-3 font-headings">Program Overview</h2>
+            <div id="overview-content">
+              <p>Our High School Prospect Camp is built for competitive athletes seeking placement on college sports rosters. The training framework operates at high-tempo NCAA team speeds, challenging athletes' tactical awareness, physical positioning, and serving consistency.</p>
+              <p>During the 4-week program, players undergo vertical assessment, speed-ladder training, video evaluation of hand placements, and direct competitive match plays observed by collegiate coaches.</p>
+            </div>
           </div>
 
           <!-- Schedule/Timeline -->
           <div class="mb-5">
             <h3 class="text-uppercase mb-4 font-headings">Daily Camp Schedule</h3>
-            <div class="glass-card mb-3">
-              <div class="row">
-                <div class="col-md-3 font-headings text-accent" style="font-weight: 700;">08:30 AM - 09:30 AM</div>
-                <div class="col-md-9">
-                  <h4 class="h6 text-uppercase font-headings">Warm-up & Plyometric Assessment</h4>
-                  <p class="small text-secondary mb-0">Dynamic stretching, core activation, and box jump metrics.</p>
+            <div id="schedule-container">
+              <div class="glass-card mb-3">
+                <div class="row">
+                  <div class="col-md-3 font-headings text-accent" style="font-weight: 700;">08:30 AM - 09:30 AM</div>
+                  <div class="col-md-9">
+                    <h4 class="h6 text-uppercase font-headings">Warm-up & Plyometric Assessment</h4>
+                    <p class="small text-secondary mb-0">Dynamic stretching, core activation, and box jump metrics.</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="glass-card mb-3">
-              <div class="row">
-                <div class="col-md-3 font-headings text-accent" style="font-weight: 700;">09:30 AM - 12:00 PM</div>
-                <div class="col-md-9">
-                  <h4 class="h6 text-uppercase font-headings">Position-Specific Technical Drills</h4>
-                  <p class="small text-secondary mb-0">Setters work on posture; Hitters run tempo setups; Liberos practice dig redirection.</p>
+              <div class="glass-card mb-3">
+                <div class="row">
+                  <div class="col-md-3 font-headings text-accent" style="font-weight: 700;">09:30 AM - 12:00 PM</div>
+                  <div class="col-md-9">
+                    <h4 class="h6 text-uppercase font-headings">Position-Specific Technical Drills</h4>
+                    <p class="small text-secondary mb-0">Setters work on posture; Hitters run tempo setups; Liberos practice dig redirection.</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="glass-card mb-3">
-              <div class="row">
-                <div class="col-md-3 font-headings text-accent" style="font-weight: 700;">12:00 PM - 01:30 PM</div>
-                <div class="col-md-9">
-                  <h4 class="h6 text-uppercase font-headings">Lunch & Classroom Tactical Video Huddle</h4>
-                  <p class="small text-secondary mb-0">Nutritional advice session followed by structural rotation pattern video reviews.</p>
+              <div class="glass-card mb-3">
+                <div class="row">
+                  <div class="col-md-3 font-headings text-accent" style="font-weight: 700;">12:00 PM - 01:30 PM</div>
+                  <div class="col-md-9">
+                    <h4 class="h6 text-uppercase font-headings">Lunch & Classroom Tactical Video Huddle</h4>
+                    <p class="small text-secondary mb-0">Nutritional advice session followed by structural rotation pattern video reviews.</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="glass-card">
-              <div class="row">
-                <div class="col-md-3 font-headings text-accent" style="font-weight: 700;">01:30 PM - 04:00 PM</div>
-                <div class="col-md-9">
-                  <h4 class="h6 text-uppercase font-headings">6v6 Scrimmages & Metric Capturing</h4>
-                  <p class="small text-secondary mb-0">Competitive game states focused on tactical adjustments and block setups.</p>
+              <div class="glass-card">
+                <div class="row">
+                  <div class="col-md-3 font-headings text-accent" style="font-weight: 700;">01:30 PM - 04:00 PM</div>
+                  <div class="col-md-9">
+                    <h4 class="h6 text-uppercase font-headings">6v6 Scrimmages & Metric Capturing</h4>
+                    <p class="small text-secondary mb-0">Competitive game states focused on tactical adjustments and block setups.</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -143,23 +149,23 @@
             <ul class="footer-links mb-4 gap-3">
               <li class="d-flex justify-content-between text-secondary">
                 <span>Category:</span>
-                <strong class="text-primary">Prospect Prep</strong>
+                <strong id="spec-category" class="text-primary">Prospect Prep</strong>
               </li>
               <li class="d-flex justify-content-between text-secondary">
                 <span>Duration:</span>
-                <strong class="text-primary">4 Weeks</strong>
+                <strong id="spec-duration" class="text-primary">4 Weeks</strong>
               </li>
               <li class="d-flex justify-content-between text-secondary">
                 <span>Age Limit:</span>
-                <strong class="text-primary">14 - 18 Years</strong>
+                <strong id="spec-age" class="text-primary">14 - 18 Years</strong>
               </li>
               <li class="d-flex justify-content-between text-secondary">
                 <span>Availability:</span>
-                <strong class="text-primary">12 Slots Left</strong>
+                <strong id="spec-availability" class="text-primary">12 Slots Left</strong>
               </li>
             </ul>
             <div class="text-center">
-              <span class="h2 font-headings text-accent d-block mb-3">$399</span>
+              <span id="price-value" class="h2 font-headings text-accent d-block mb-3">$399</span>
               <a href="signup.html" class="btn-custom btn-primary-camp w-100">Enroll Today</a>
             </div>
           </div>
@@ -168,10 +174,10 @@
           <div class="glass-card">
             <h3 class="h4 mb-4 text-uppercase font-headings">Director in Charge</h3>
             <div class="d-flex align-items-center gap-3">
-              <img src="assets/images/coaches/coach-1.jpg" alt="Marcus Sterling" class="rounded-circle" style="width: 60px; height: 60px; object-fit: cover;">
+              <img id="director-img" src="assets/images/coaches/coach-1.jpg" alt="Marcus Sterling" class="rounded-circle" style="width: 60px; height: 60px; object-fit: cover;">
               <div>
-                <h4 class="h6 text-uppercase font-headings mb-1"><a href="coach-details.html">Marcus Sterling</a></h4>
-                <p class="small text-muted mb-0">Former Pro, Technical Director</p>
+                <h4 class="h6 text-uppercase font-headings mb-1"><a id="director-name" href="coach-details.html">Marcus Sterling</a></h4>
+                <p id="director-role" class="small text-muted mb-0">Former Pro, Technical Director</p>
               </div>
             </div>
           </div>
@@ -207,9 +213,9 @@
           <h3 class="footer-col-title">Programs</h3>
           <ul class="footer-links">
             <li><a href="programs.html" class="footer-link">All Programs</a></li>
-            <li><a href="program-details.html" class="footer-link">College Prospect Prep</a></li>
+            <li><a href="program-details.html?program=college-showcase-prep" class="footer-link">College Prospect Prep</a></li>
             <li><a href="seasonal-camps.html" class="footer-link">Summer Elite Camp</a></li>
-            <li><a href="programs.html" class="footer-link">Youth Skills Clinic</a></li>
+            <li><a href="program-details.html?program=youth-development" class="footer-link">Youth Skills Clinic</a></li>
           </ul>
         </div>
         <div class="col-lg-3 col-md-6">
@@ -249,5 +255,275 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/animations.js"></script>
+  <script>
+    // Program database
+    const PROGRAMS_DATA = {
+      "youth-development": {
+        title: "Youth Development Clinics",
+        subtitle: "Junior Foundation Track",
+        metaDesc: "Youth Development Clinics details. Build core volleyball mechanics: forearm passing, setting posture, and serve consistency at Spike Academy.",
+        breadcrumb: "Youth Development Clinics",
+        imageSrc: "assets/images/programs/clinic.png",
+        imageAlt: "Youth clinic forearm passing practice",
+        overviewTitle: "Program Overview",
+        overviewParagraphs: [
+          "Our Youth Development Clinics focus on building core volleyball mechanics: forearm passing, setting posture, serve consistency, and court spatial awareness. The goal is to establish a strong technical foundation in a fun, positive, and encouraging environment.",
+          "During the 6-week course, younger athletes learn structural rules, proper court movements, and cooperative gameplay. Each training block is designed to build confidence and prepare players for middle school teams."
+        ],
+        category: "Youth Development",
+        duration: "6 Weeks",
+        ageLimit: "9 - 13 Years",
+        availability: "15 Slots Left",
+        price: "$299",
+        director: {
+          id: "sarah-jenkins",
+          name: "Sarah Jenkins",
+          role: "Associate Director, Youth Dev Lead",
+          image: "assets/images/coaches/coach-2.jpg"
+        },
+        schedule: [
+          { time: "08:30 AM - 09:30 AM", title: "Warm-up & Agility Fun", desc: "Dynamic games, basic coordination, and footwork tracking." },
+          { time: "09:30 AM - 12:00 PM", title: "Passing & Setting Basics", desc: "Basic forearm passes, overhead setting stance, and underhand serving clinics." },
+          { time: "12:00 PM - 01:30 PM", title: "Lunch & Interactive Court Rules Review", desc: "Instructional interactive session outlining court dimensions and rotational concepts." },
+          { time: "01:30 PM - 04:00 PM", title: "Controlled 3v3 / 4v4 Play", desc: "Modified games emphasizing team play, passing transitions, and serving accuracy." }
+        ]
+      },
+      "high-school-prospect": {
+        title: "High School Prospect Camp",
+        subtitle: "Elite Recruiting Track",
+        metaDesc: "High School Prospect Camp details. Undergo technical training, vertical metric reporting, and recruiting guides at Spike Academy.",
+        breadcrumb: "Prospect Camp",
+        imageSrc: "assets/images/programs/highschool.png",
+        imageAlt: "High school volleyball players spiking over net",
+        overviewTitle: "Program Overview",
+        overviewParagraphs: [
+          "Our High School Prospect Camp is built for competitive athletes seeking placement on college sports rosters. The training framework operates at high-tempo NCAA team speeds, challenging athletes' tactical awareness, physical positioning, and serving consistency.",
+          "During the 4-week program, players undergo vertical assessment, speed-ladder training, video evaluation of hand placements, and direct competitive match plays observed by collegiate coaches."
+        ],
+        category: "Prospect Prep",
+        duration: "4 Weeks",
+        ageLimit: "14 - 18 Years",
+        availability: "12 Slots Left",
+        price: "$399",
+        director: {
+          id: "marcus-sterling",
+          name: "Marcus Sterling",
+          role: "Former Pro, Technical Director",
+          image: "assets/images/coaches/coach-1.jpg"
+        },
+        schedule: [
+          { time: "08:30 AM - 09:30 AM", title: "Warm-up & Plyometric Assessment", desc: "Dynamic stretching, core activation, and box jump metrics." },
+          { time: "09:30 AM - 12:00 PM", title: "Position-Specific Technical Drills", desc: "Setters work on posture; Hitters run tempo setups; Liberos practice dig redirection." },
+          { time: "12:00 PM - 01:30 PM", title: "Lunch & Classroom Tactical Video Huddle", desc: "Nutritional advice session followed by structural rotation pattern video reviews." },
+          { time: "01:30 PM - 04:00 PM", title: "6v6 Scrimmages & Metric Capturing", desc: "Competitive game states focused on tactical adjustments and block setups." }
+        ]
+      },
+      "college-showcase-prep": {
+        title: "College & Showcase Prep",
+        subtitle: "Showcase & Metric Track",
+        metaDesc: "College & Showcase Prep details. Focuses on vertical metrics reporting, recruiting profile optimization, and high-intensity NCAA-level scrimmage setups.",
+        breadcrumb: "Showcase & Prep",
+        imageSrc: "assets/images/programs/elite.png",
+        imageAlt: "College showcase spike jump training",
+        overviewTitle: "Program Overview",
+        overviewParagraphs: [
+          "Tailored specifically to college prospects, this high-exposure training program focuses on vertical metrics reporting, recruiting profile optimization, and high-intensity NCAA-level scrimmage setups.",
+          "Over 2 weeks, players record high-definition recruiting videos, run through athletic testing batteries (vertical touch, shuttle run), and learn how to construct college communications."
+        ],
+        category: "College Exposure",
+        duration: "2 Weeks",
+        ageLimit: "15 - 18 Years / Recruits",
+        availability: "8 Slots Left",
+        price: "$499",
+        director: {
+          id: "marcus-sterling",
+          name: "Marcus Sterling",
+          role: "Former Pro, Recruiting Lead",
+          image: "assets/images/coaches/coach-1.jpg"
+        },
+        schedule: [
+          { time: "08:30 AM - 09:30 AM", title: "Showcase Testing & Verticals", desc: "Measuring vertical jumps using target touch arrays and radar spike speeds." },
+          { time: "09:30 AM - 12:00 PM", title: "Advanced Out-of-System Transitioning", desc: "Setting up out-of-system attacks, blocking schemes, and slide hitting." },
+          { time: "12:00 PM - 01:30 PM", title: "Lunch & Recruiting Seminar", desc: "Learning NCAA eligibility compliance, recruiting rules, and portal management." },
+          { time: "01:30 PM - 04:00 PM", title: "Filmed 6v6 Scrimmages", desc: "Scrimmages designed for recruitment highlight tapes under game-like pressure states." }
+        ]
+      },
+      "beach-volleyball-tactics": {
+        title: "Beach Volleyball Tactics",
+        subtitle: "Sand Court Agility Track",
+        metaDesc: "Beach Volleyball Tactics details. Focuses on wind adjustment, quick defensive recovery, sand agility conditioning, and mastering the 2v2 tactical gameplay.",
+        breadcrumb: "Beach Tactics",
+        imageSrc: "assets/images/programs/beach.png",
+        imageAlt: "Beach volleyball players diving in sand",
+        overviewTitle: "Program Overview",
+        overviewParagraphs: [
+          "Outdoor sand court strategy. Focuses on wind adjustment, quick defensive recovery, sand agility conditioning, and mastering the 2v2 tactical gameplay.",
+          "Over 8 weeks, sand players learn the differences in passing, setting, and defensive movement on sand versus hard courts. Agility and cardiorespiratory load are double that of indoor, building extreme stamina."
+        ],
+        category: "Sand & Beach",
+        duration: "8 Weeks",
+        ageLimit: "12 - 18 Years",
+        availability: "10 Slots Left",
+        price: "$349",
+        director: {
+          id: "sarah-jenkins",
+          name: "Sarah Jenkins",
+          role: "Associate Director, Beach Lead",
+          image: "assets/images/coaches/coach-2.jpg"
+        },
+        schedule: [
+          { time: "08:30 AM - 09:30 AM", title: "Sand Speed & Agility Drills", desc: "Footwork speed drills in deep sand, sand jump optimization, and core stabilizer training." },
+          { time: "09:30 AM - 12:00 PM", title: "Wind Control & Sand Setting Masterclass", desc: "Hand setting on sand, knuckle serves, wind angle adjustments, and deep-corner attacks." },
+          { time: "12:00 PM - 01:30 PM", title: "Lunch & Sand Strategy Briefing", desc: "Learning the rules of 2v2 beach volleyball, hand signals, and defense alignment." },
+          { time: "01:30 PM - 04:00 PM", title: "2v2 Mini-Tournament Scrimmages", desc: "Strenuous match play utilizing sand transition rules, blocks, and wind adjustments." }
+        ]
+      },
+      "setter-libero-masterclass": {
+        title: "Setter & Libero Masterclass",
+        subtitle: "Technical Specialist Track",
+        metaDesc: "Setter & Libero Masterclass details. Intense role-focused workshop covering advanced jump-setting, defensive diving, dig redirection, and court leadership.",
+        breadcrumb: "Setter & Libero",
+        imageSrc: "assets/images/programs/setter_libero.png",
+        imageAlt: "Volleyball setter hands setting the ball",
+        overviewTitle: "Program Overview",
+        overviewParagraphs: [
+          "Intense role-focused workshop covering advanced jump-setting, defensive diving, dig redirection, server-receiver tactics, and court leadership.",
+          "Setters work on finger posture, quick transition targets, and offensive set strategies. Liberos focus on forearm angles, emergency floor defense, and serving reception accuracy."
+        ],
+        category: "Specialty Position",
+        duration: "3 Weeks",
+        ageLimit: "14 - 18 Years",
+        availability: "6 Slots Left",
+        price: "$329",
+        director: {
+          id: "dave-miller",
+          name: "Dave Miller",
+          role: "Setter Technical Coach",
+          image: "assets/images/coaches/coach-3.jpg"
+        },
+        schedule: [
+          { time: "08:30 AM - 09:30 AM", title: "Joint Target Warm-up & Hand Prep", desc: "Hand strength setups for setters; reflex and reaction ball drills for liberos." },
+          { time: "09:30 AM - 12:00 PM", title: "Isolated Position Repetitions", desc: "Setters repeat jump-sets and back-sets; Liberos dig heavy spikes from ball machines." },
+          { time: "12:00 PM - 01:30 PM", title: "Lunch & Rotational Defense Breakdown", desc: "Reviewing defense positioning: perimeter vs. rotation defensive alignments." },
+          { time: "01:30 PM - 04:00 PM", title: "Set-to-Defend Real Game Drills", desc: "Integrated gameplay where setters run fast tempos against liberos' defensive schemes." }
+        ]
+      },
+      "vertical-jump-bootcamp": {
+        title: "Vertical Jump Bootcamp",
+        subtitle: "Plyometric & Agility Track",
+        metaDesc: "Vertical Jump Bootcamp details. Core strength and plyometric training aimed at increasing reach, landing safety, sprint speed, and court stamina.",
+        breadcrumb: "Vertical Bootcamp",
+        imageSrc: "assets/images/programs/vertical_bootcamp.png",
+        imageAlt: "Volleyball athlete performing plyometric box jump",
+        overviewTitle: "Program Overview",
+        overviewParagraphs: [
+          "Core strength and plyometric training aimed at increasing reach, landing safety, sprint speed, and court stamina. This program is critical for avoiding joint injury.",
+          "Over 5 weeks, athletes focus on lower body explosive power, kinetic chain mechanics, core stability, and single-foot jumping targets to significantly boost vertical reach."
+        ],
+        category: "Athletic Performance",
+        duration: "5 Weeks",
+        ageLimit: "All Ages",
+        availability: "18 Slots Left",
+        price: "$279",
+        director: {
+          id: "elena-rostova",
+          name: "Elena Rostova",
+          role: "Strength Specialist",
+          image: "assets/images/coaches/coach-4.jpg"
+        },
+        schedule: [
+          { time: "08:30 AM - 09:30 AM", title: "Kinetic Warm-up & Landing Drills", desc: "Joint mobility, landing impact dispersion tactics, and ankle/knee alignment." },
+          { time: "09:30 AM - 12:00 PM", title: "Explosive Plyometrics & Box Training", desc: "Weighted box jumps, depth drops, bounding, and resistance band runs." },
+          { time: "12:00 PM - 01:30 PM", title: "Lunch & Sports Nutrition Huddle", desc: "Explaining macronutrients, hydration, muscle recovery, and sleep hygiene." },
+          { time: "01:30 PM - 04:00 PM", title: "Peak Power Drills & Jumping Scrimmages", desc: "Scrimmages focusing on high-reach spikes, block timing, and speed transitions." }
+        ]
+      }
+    };
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const programKey = urlParams.get("program");
+      const data = PROGRAMS_DATA[programKey] || PROGRAMS_DATA["high-school-prospect"];
+
+      if (data) {
+        // Page Title & Meta
+        document.title = `${data.title} | Spike Academy`;
+        const metaDescEl = document.getElementById("meta-desc");
+        if (metaDescEl) {
+          metaDescEl.setAttribute("content", data.metaDesc);
+        }
+
+        // Banners & Breadcrumbs
+        const bannerSubtitle = document.getElementById("banner-subtitle");
+        const bannerTitle = document.getElementById("banner-title");
+        const breadcrumbActive = document.getElementById("breadcrumb-active");
+        if (bannerSubtitle) bannerSubtitle.textContent = data.subtitle;
+        if (bannerTitle) bannerTitle.textContent = data.title;
+        if (breadcrumbActive) breadcrumbActive.textContent = data.breadcrumb;
+
+        // Image & Overview
+        const programImg = document.getElementById("program-img");
+        const overviewTitle = document.getElementById("overview-title");
+        const overviewContent = document.getElementById("overview-content");
+        if (programImg) {
+          programImg.src = data.imageSrc;
+          programImg.alt = data.imageAlt;
+        }
+        if (overviewTitle) {
+          overviewTitle.textContent = data.overviewTitle;
+        }
+        if (overviewContent) {
+          overviewContent.innerHTML = data.overviewParagraphs
+            .map(p => `<p>${p}</p>`)
+            .join("");
+        }
+
+        // Timeline Schedule
+        const scheduleContainer = document.getElementById("schedule-container");
+        if (scheduleContainer) {
+          scheduleContainer.innerHTML = data.schedule
+            .map((item, idx) => `
+              <div class="glass-card mb-3">
+                <div class="row">
+                  <div class="col-md-3 font-headings text-accent" style="font-weight: 700;">${item.time}</div>
+                  <div class="col-md-9">
+                    <h4 class="h6 text-uppercase font-headings">${item.title}</h4>
+                    <p class="small text-secondary mb-0">${item.desc}</p>
+                  </div>
+                </div>
+              </div>
+            `).join("");
+        }
+
+        // Key Specs Sidebar
+        const specCategory = document.getElementById("spec-category");
+        const specDuration = document.getElementById("spec-duration");
+        const specAge = document.getElementById("spec-age");
+        const specAvailability = document.getElementById("spec-availability");
+        const priceValue = document.getElementById("price-value");
+        if (specCategory) specCategory.textContent = data.category;
+        if (specDuration) specDuration.textContent = data.duration;
+        if (specAge) specAge.textContent = data.ageLimit;
+        if (specAvailability) specAvailability.textContent = data.availability;
+        if (priceValue) priceValue.textContent = data.price;
+
+        // Director
+        const directorImg = document.getElementById("director-img");
+        const directorName = document.getElementById("director-name");
+        const directorRole = document.getElementById("director-role");
+        if (directorImg) {
+          directorImg.src = data.director.image;
+          directorImg.alt = data.director.name;
+        }
+        if (directorName) {
+          directorName.textContent = data.director.name;
+          directorName.href = `coach-details.html?coach=${data.director.id}`;
+        }
+        if (directorRole) {
+          directorRole.textContent = data.director.role;
+        }
+      }
+    });
+  </script>
 </body>
 </html>

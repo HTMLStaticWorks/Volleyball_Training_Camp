@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Register an athlete at Spike Volleyball Academy. Sign up for camps, metrics tracking, and recruiting portfolios.">
   <title>Register Athlete | Spike Academy Portal</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <!-- Stylesheets -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
@@ -18,6 +20,12 @@
 
   <!-- Auth Layout Wrapper -->
   <div class="auth-wrapper">
+    <!-- Top Action Controls (Theme, RTL) -->
+    <div class="auth-top-actions">
+      <button class="theme-switch-btn" aria-label="Toggle Theme"></button>
+      <button class="rtl-switch-btn" aria-label="Toggle RTL">RTL</button>
+    </div>
+
     <div class="auth-card" style="max-width: 550px;">
       <div class="auth-header">
         <a href="index.html" class="auth-logo brand-logo">
@@ -33,35 +41,44 @@
       </div>
 
       <form id="signupForm">
-        <div class="row">
-          <div class="col-md-6 form-group">
-            <label class="form-label">Full Name</label>
-            <input type="text" class="form-control-camp" placeholder="John Doe" required autocomplete="name">
-          </div>
-          <div class="col-md-6 form-group">
-            <label class="form-label">Contact Email</label>
-            <input type="email" class="form-control-camp" placeholder="john@example.com" required autocomplete="email">
-          </div>
+        <div class="form-group">
+          <label class="form-label">Full Name</label>
+          <input type="text" class="form-control-camp" placeholder="John Doe" required autocomplete="name">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Contact Email</label>
+          <input type="email" class="form-control-camp" placeholder="john@example.com" required autocomplete="email">
         </div>
 
-        <div class="row">
-          <div class="col-md-6 form-group">
-            <label class="form-label">Registration Role</label>
-            <select class="form-control-camp" style="background-color: var(--bg-primary);">
-              <option>Athlete Profile</option>
-              <option>Parent / Guardian Profile</option>
-              <option>Recruiting Scout Profile</option>
-            </select>
-          </div>
-          <div class="col-md-6 form-group">
-            <label class="form-label">Athlete Graduation Year</label>
-            <input type="text" class="form-control-camp" placeholder="e.g. 2027" required>
-          </div>
+        <div class="form-group">
+          <label class="form-label">Registration Role</label>
+          <select class="form-control-camp" style="background-color: var(--bg-primary);">
+            <option>Athlete Profile</option>
+            <option>Parent / Guardian Profile</option>
+            <option>Recruiting Scout Profile</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Athlete Graduation Year</label>
+          <input type="text" class="form-control-camp" placeholder="e.g. 2027" required>
         </div>
 
         <div class="form-group">
           <label class="form-label">Password</label>
-          <input type="password" class="form-control-camp" placeholder="Minimum 8 characters" required autocomplete="new-password">
+          <div class="password-field-wrapper">
+            <input type="password" class="form-control-camp" placeholder="Minimum 8 characters" required autocomplete="new-password">
+            <button type="button" class="password-toggle-btn" aria-label="Toggle Password Visibility">
+              <!-- Eye Open Icon -->
+              <svg class="eye-icon eye-open" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.43 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <!-- Eye Closed Icon (Hidden Initially) -->
+              <svg class="eye-icon eye-closed" viewBox="0 0 24 24" style="display: none;">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.98 8.223A10.477 10.477 0 001.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.45 10.45 0 0112 4.5c4.756 0 8.773 3.162 10.065 7.498a10.523 10.523 0 01-4.293 5.774M6.228 6.228L3 3m3.228 3.228l3.65 3.65m7.894 7.894L21 21m-3.228-3.228l-3.65-3.65m0 0a3 3 0 10-4.243-4.243m4.242 4.242L9.88 9.88" />
+              </svg>
+            </button>
+          </div>
         </div>
 
         <div class="form-group mb-4">

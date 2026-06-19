@@ -7,6 +7,8 @@
   <meta name="description"
     content="Explore volleyball camp programs. Spike Academy offers youth skills training, specialized setting masterclasses, and vertical jump bootcamps.">
   <title>Our Volleyball Programs | Spike Academy</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <!-- Stylesheets -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
@@ -33,7 +35,7 @@
       </a>
       <ul class="nav-links">
         <li class="nav-item">
-          <a href="index.html" class="nav-link">Home</a>
+          <a href="index.html" class="nav-link">Home<svg class="nav-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
           <ul class="nav-dropdown">
             <li><a href="index.html" class="dropdown-link">Home 1 (Elite)</a></li>
             <li><a href="home-2.html" class="dropdown-link">Home 2 (Recruiting)</a></li>
@@ -93,13 +95,14 @@
               <span class="program-badge">Youth (Ages 9-13)</span>
             </div>
             <div class="program-content">
-              <h3 class="program-title"><a href="program-details.html">Youth Development Clinics</a></h3>
+              <h3 class="program-title"><a href="program-details.html?program=youth-development">Youth Development Clinics</a></h3>
               <p class="program-desc">Focuses on building core volleyball mechanics: forearm passing, setting posture,
                 serve consistency, and court spatial awareness.</p>
               <div class="program-meta">
                 <span>6 Weeks</span>
                 <span class="text-primary">$299</span>
               </div>
+              <a href="program-details.html?program=youth-development" class="btn-custom btn-secondary-camp btn-card">View Details</a>
             </div>
           </div>
         </div>
@@ -112,13 +115,14 @@
               <span class="program-badge">Competitive (Ages 14-18)</span>
             </div>
             <div class="program-content">
-              <h3 class="program-title"><a href="program-details.html">High School Prospect Camp</a></h3>
+              <h3 class="program-title"><a href="program-details.html?program=high-school-prospect">High School Prospect Camp</a></h3>
               <p class="program-desc">High-tempo skill development covering offensive combinations, server-receiver
                 tactics, and game-speed defensive transitions.</p>
               <div class="program-meta">
                 <span>4 Weeks</span>
                 <span class="text-primary">$399</span>
               </div>
+              <a href="program-details.html?program=high-school-prospect" class="btn-custom btn-secondary-camp btn-card">View Details</a>
             </div>
           </div>
         </div>
@@ -131,13 +135,14 @@
               <span class="program-badge">Elite / Recruits</span>
             </div>
             <div class="program-content">
-              <h3 class="program-title"><a href="program-details.html">College & Showcase Prep</a></h3>
+              <h3 class="program-title"><a href="program-details.html?program=college-showcase-prep">College & Showcase Prep</a></h3>
               <p class="program-desc">Tailored to college prospects. High exposure training including video analysis,
                 vertical metrics reporting, and recruitment guides.</p>
               <div class="program-meta">
                 <span>2 Weeks</span>
                 <span class="text-primary">$499</span>
               </div>
+              <a href="program-details.html?program=college-showcase-prep" class="btn-custom btn-secondary-camp btn-card">View Details</a>
             </div>
           </div>
         </div>
@@ -150,13 +155,14 @@
               <span class="program-badge">Beach (Ages 12-18)</span>
             </div>
             <div class="program-content">
-              <h3 class="program-title"><a href="program-details.html">Beach Volleyball Tactics</a></h3>
+              <h3 class="program-title"><a href="program-details.html?program=beach-volleyball-tactics">Beach Volleyball Tactics</a></h3>
               <p class="program-desc">Outdoor sand court strategy. Focuses on wind adjustment, quick defensive recovery,
                 and sand agility conditioning.</p>
               <div class="program-meta">
                 <span>8 Weeks</span>
                 <span class="text-primary">$349</span>
               </div>
+              <a href="program-details.html?program=beach-volleyball-tactics" class="btn-custom btn-secondary-camp btn-card">View Details</a>
             </div>
           </div>
         </div>
@@ -169,13 +175,14 @@
               <span class="program-badge">Specialty (Ages 14-18)</span>
             </div>
             <div class="program-content">
-              <h3 class="program-title"><a href="program-details.html">Setter & Libero Masterclass</a></h3>
+              <h3 class="program-title"><a href="program-details.html?program=setter-libero-masterclass">Setter & Libero Masterclass</a></h3>
               <p class="program-desc">Intense role-focused workshop covering advanced jump-setting, defensive diving,
                 dig redirection, and court leadership.</p>
               <div class="program-meta">
                 <span>3 Weeks</span>
                 <span class="text-primary">$329</span>
               </div>
+              <a href="program-details.html?program=setter-libero-masterclass" class="btn-custom btn-secondary-camp btn-card">View Details</a>
             </div>
           </div>
         </div>
@@ -188,13 +195,14 @@
               <span class="program-badge">Athletic (All Ages)</span>
             </div>
             <div class="program-content">
-              <h3 class="program-title"><a href="program-details.html">Vertical Jump Bootcamp</a></h3>
+              <h3 class="program-title"><a href="program-details.html?program=vertical-jump-bootcamp">Vertical Jump Bootcamp</a></h3>
               <p class="program-desc">Core strength and plyometric training aimed at increasing reach, landing safety,
                 sprint speed, and court stamina.</p>
               <div class="program-meta">
                 <span>5 Weeks</span>
                 <span class="text-primary">$279</span>
               </div>
+              <a href="program-details.html?program=vertical-jump-bootcamp" class="btn-custom btn-secondary-camp btn-card">View Details</a>
             </div>
           </div>
         </div>
@@ -401,9 +409,9 @@
           <h3 class="footer-col-title">Programs</h3>
           <ul class="footer-links">
             <li><a href="programs.html" class="footer-link">All Programs</a></li>
-            <li><a href="program-details.html" class="footer-link">College Prospect Prep</a></li>
+            <li><a href="program-details.html?program=college-showcase-prep" class="footer-link">College Prospect Prep</a></li>
             <li><a href="seasonal-camps.html" class="footer-link">Summer Elite Camp</a></li>
-            <li><a href="programs.html" class="footer-link">Youth Skills Clinic</a></li>
+            <li><a href="program-details.html?program=youth-development" class="footer-link">Youth Skills Clinic</a></li>
           </ul>
         </div>
         <div class="col-lg-3 col-md-6">

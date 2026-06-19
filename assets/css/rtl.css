@@ -74,10 +74,13 @@
 /* Mirroring arrow directions on buttons and controls */
 [dir="rtl"] .testimonial-prev svg,
 [dir="rtl"] .testimonial-next svg,
-[dir="rtl"] .btn-newsletter svg,
 [dir="rtl"] .coach-social-link svg,
 [dir="rtl"] .footer-social-link svg {
   transform: scaleX(-1);
+}
+
+[dir="rtl"] .btn-newsletter svg {
+  transform: rotate(-90deg);
 }
 
 /* RTL Layout Toggle Switch style (matching theme button) */
@@ -121,3 +124,26 @@
   left: auto;
   right: 0;
 }
+
+/* RTL Password Visibility Toggle Overrides */
+[dir="rtl"] .password-toggle-btn {
+  right: auto;
+  left: 15px;
+}
+
+[dir="rtl"] .password-field-wrapper .form-control-camp {
+  padding-right: 15px;
+  padding-left: 45px;
+}
+
+[dir="rtl"] .auth-top-actions {
+  right: auto;
+  left: 20px;
+}
+
+/* RTL Scroll to Top Button */
+[dir="rtl"] .scroll-to-top-btn {
+  right: auto;
+  left: 30px;
+}
+
